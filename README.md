@@ -40,7 +40,7 @@ DATABASE PASSWORD: Jolyn3131
 AWS EC2 Instance IP: http://3.26.7.118:80
 
 Docker Image: meownicorn/meeting-room-reservation-system
-https://hub.docker.com/r/meownicorn/meeting-room-reservation-system
+https://hub.docker.com/repository/docker/meownicorn/meeting-room-booking-system/general
 
 
 ## Application Info
