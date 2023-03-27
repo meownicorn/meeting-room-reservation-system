@@ -19,6 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
+
 import static com.jolyn.meetingroomreservationsystem.constant.EmailConstant.REGISTER_MAIL_TEMPLATE;
 import static com.jolyn.meetingroomreservationsystem.constant.SecurityConstant.JWT_TOKEN_HEADER;
 import static com.jolyn.meetingroomreservationsystem.exception.ExceptionHandling.EMAIL_ALREADY_EXIST;
@@ -70,6 +72,7 @@ public class AuthServiceImpl implements AuthService {
         authenticate(dto.getEmail(), dto.getPassword());
         UserInfo loginUser = userInfoRepository.findByEmail(dto.getEmail());
         HttpHeaders jwtHeader = getJwtHeader(loginUser);
+        userInfoRepository.save(loginUser);
         return jwtHeader;
     }
 

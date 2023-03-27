@@ -66,7 +66,7 @@ public class UserInfoController extends ExceptionHandling {
     }
 
     @PostMapping("/change-password")
-    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN')")
+    @PreAuthorize("hasAnyAuthority('ROLE_ADMIN', 'ROLE_USER')")
     public ResponseEntity<?> changePassword(@RequestBody ChangePasswordDto dto) throws PasswordIncorrectException {
         log.info("Change Password");
         userInfoService.changePassword(dto);
