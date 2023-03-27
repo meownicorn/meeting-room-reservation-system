@@ -4,7 +4,7 @@
 This is a simple meeting room booking system with user authorities and crud of the reservations. Please read finish as it is important for some AWS credentials.
 
 ## Table of contents
-* [Technologies]{#technologies}
+* [Technologies](#technologies)
 * [Prerequisite](#prerequisite)
 * [Emails Available for AWS SES](#emails-available-for-aws-ses)
 * [Links and Domains](#links-and-domains)
