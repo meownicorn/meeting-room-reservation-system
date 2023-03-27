@@ -41,16 +41,15 @@ If you wish to use your own email, do let me know so I can add your email addres
 * dummy.meeting.5@gmail.com |  pwd: Test@123
 
 ## Links and Domains
-AWS RDS HOST: meeting-room-database.cwzpkinz3ndu.ap-southeast-2.rds.amazonaws.com
-AWS RDS PORT: 3306
-DATABASE: meeting_room
-DATABASE USERNAME: admin
-DATABASE PASSWORD: Jolyn3131
+  - AWS RDS HOST: meeting-room-database.cwzpkinz3ndu.ap-southeast-2.rds.amazonaws.com
+  - AWS RDS PORT: 3306
+  - DATABASE: meeting_room
+  - DATABASE USERNAME: admin
+  - DATABASE PASSWORD: Jolyn3131
 
-AWS EC2 Instance IP: http://3.26.7.118:80
+  - AWS EC2 Instance IP: http://3.26.7.118:80
 
-Docker Image: meownicorn/meeting-room-reservation-system
-https://hub.docker.com/r/meownicorn/meeting-room-booking-system
+  - Docker Image: meownicorn/meeting-room-reservation-system https://hub.docker.com/r/meownicorn/meeting-room-booking-system
 
 
 ## Application Info
