@@ -4,11 +4,21 @@
 This is a simple meeting room booking system with user authorities and crud of the reservations. Please read finish as it is important for some AWS credentials.
 
 ## Table of contents
+* [Technologies]{#technologies}
 * [Prerequisite](#prerequisite)
 * [Emails Available for AWS SES](#emails-available-for-aws-ses)
 * [Links and Domains](#links-and-domains)
 * [Application Info](#application-info)
 * [Future Enhancement](#future-enhancement)
+
+## Technologies
+  - Spring v3
+  - Spring Security with Json Web Token (JWT)
+  - AWS RDS with mySQL
+  - AWS SES
+  - AWS EC2
+  - Docker
+  - Mockito v5
 
 ## Prerequisite
 Roles available: ROLE_ADMIN, ROLE_USER
