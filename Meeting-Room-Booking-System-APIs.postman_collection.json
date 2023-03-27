@@ -1,0 +1,590 @@
+{
+	"info": {
+		"_postman_id": "859c682f-af4c-4996-8ecb-cdb41247b400",
+		"name": "Meeting-Room-Booking-System-APIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26537232"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"New\",\n    \"lastName\": \"Jolyn\",\n    \"email\": \"jolyn.ling.gan@gmail.com\",\n    \"contact\": \"0123456789\",\n    \"password\": \"Jolyn3131\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"jolyngan2@gmail.com\",\n    \"password\": \"Jolyn3131\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "c2ad015b-99d1-41a5-9287-be87faf09752",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ReservationAPI",
+			"item": [
+				{
+					"name": "Get All Reservations",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NzY4NDEsImlhdCI6MTY3OTg3MzI0MX0.9gTZTs9QH3-RXElUSfoyf62QnaGtJCKYwQVJUFUwWPrUmOnEaEPo53oDE6fdZGhjp9Sp071Bh1521UIqoecqFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/all",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"97c930f7-b21f-4d02-b6d8-48ced3afe3f6\",\n        \"startDatetime\": \"2023-03-27 16:00:00\",\n        \"endDatetime\": \"2023-03-27 18:00:00\",\n        \"reason\": \"new reason\",\n        \"userEmail\": \"jolyngancheaoling@gmail.com\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/update",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW4ubGluZy5nYW5AZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImV4cCI6MTY3OTg1MzQ3OCwiaWF0IjoxNjc5ODQ5ODc4fQ.2ZdC4X1p43EDqR1PIhnrmOfL6adZO0fTB3hTGJ6_5AWg0g0I9-GX8ld95WU30x0RS216G4o6sDJj5qCv53B2hQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/delete/2b8a4ae4-87c5-4f71-a250-4d178f26ae8b",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"delete",
+								"2b8a4ae4-87c5-4f71-a250-4d178f26ae8b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NzY4NDEsImlhdCI6MTY3OTg3MzI0MX0.9gTZTs9QH3-RXElUSfoyf62QnaGtJCKYwQVJUFUwWPrUmOnEaEPo53oDE6fdZGhjp9Sp071Bh1521UIqoecqFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"startDatetime\": \"2023-03-28 14:00:00\",\n        \"endDatetime\": \"2023-03-28 16:00:00\",\n        \"reason\": \"test reason\",\n        \"userEmail\": \"jolyngancheaoling@gmail.com\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/create",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Today Reservation",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/today-reservations",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"today-reservations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Reservation by User Email",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/reservations/find-by-email?email=jolyngancheaoling@gmail.com",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"reservations",
+								"find-by-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "jolyngancheaoling@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "UsersAPI",
+			"item": [
+				{
+					"name": "Create User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"User\",\n    \"lastName\": \"Admin\",\n    \"email\": \"jolyngan2@gmail.com\",\n    \"contact\": \"0129933400\",\n    \"role\": \"ROLE_USER\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/create",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"197e0ac3-b85f-413e-8cf7-2181c8458a6d\",\n        \"firstName\": \"Jolyn\",\n        \"lastName\": \"Gan\",\n        \"email\": \"jolyngancheaoling@gmail.com\",\n        \"contact\": \"0123028358\",\n        \"role\": \"ROLE_ADMIN\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/update",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NzY4NDEsImlhdCI6MTY3OTg3MzI0MX0.9gTZTs9QH3-RXElUSfoyf62QnaGtJCKYwQVJUFUwWPrUmOnEaEPo53oDE6fdZGhjp9Sp071Bh1521UIqoecqFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c2ad015b-99d1-41a5-9287-be87faf09752\",\n    \"firstName\": \"Jolyn\",\n    \"lastName\": \"Gan\",\n    \"email\": \"jolyngancheaoling@gmail.com\",\n    \"contact\": \"0123333333\",\n    \"password\": \"$2a$10$Pi2re0qrmaRxcg75pY3cQeZCOSVX7zH1nLOdak11j/EwqCMNkkbSO\",\n    \"lastLoginDateDisplay\": \"2023-03-26T11:00:14.000+00:00\",\n    \"lastLoginDate\": \"2023-03-26T11:01:01.000+00:00\",\n    \"role\": \"ROLE_ADMIN\",\n    \"authorities\": [\n        {\n            \"authority\": \"ROLE_ADMIN\"\n        }\n    ],\n    \"username\": \"jolyngancheaoling@gmail.com\",\n    \"accountNonExpired\": true,\n    \"accountNonLocked\": true,\n    \"credentialsNonExpired\": true,\n    \"enabled\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/all",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW4yQGdtYWlsLmNvbSIsImlzcyI6IkdldCBBcnJheXMsIExMQyIsIkF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJleHAiOjE2Nzk4ODAwMjgsImlhdCI6MTY3OTg3NjQyOH0.IafYuDOeZhfn8b8zDKtbfOKvLFgPCDbgR4KXRv4D3Y_OzWvEJ-OkTbmGarFCkAnCgujyuZimxWdZ60lIDPlurw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"id\": \"5ea1e7c4-9b00-4267-af02-ecc52605cdab\",\n        \"currentPassword\": \"EU37*&pv\",\n        \"newPassword\": \"Jolyn3131\"\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/change-password",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"change-password"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4MTc3ODAsImlhdCI6MTY3OTgxNDE4MH0.uorUyqtqaoEVN22uuIHl7kLeBiX_tM714jXj_YxQbV4hagF5i3SZy_gOQnA-tWhyGFKYSOx_6lgElj7mokYWvA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NzY4NDEsImlhdCI6MTY3OTg3MzI0MX0.9gTZTs9QH3-RXElUSfoyf62QnaGtJCKYwQVJUFUwWPrUmOnEaEPo53oDE6fdZGhjp9Sp071Bh1521UIqoecqFA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/5ea1e7c4-9b00-4267-af02-ecc52605cdab",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"5ea1e7c4-9b00-4267-af02-ecc52605cdab"
+							],
+							"query": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4MTc3ODAsImlhdCI6MTY3OTgxNDE4MH0.uorUyqtqaoEVN22uuIHl7kLeBiX_tM714jXj_YxQbV4hagF5i3SZy_gOQnA-tWhyGFKYSOx_6lgElj7mokYWvA",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget Password",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJhdWQiOiJVc2VyIE1hbmFnZW1lbnQgUG9ydGFsIiwic3ViIjoiam9seW5nYW5jaGVhb2xpbmdAZ21haWwuY29tIiwiaXNzIjoiR2V0IEFycmF5cywgTExDIiwiQXV0aG9yaXRpZXMiOlsiUk9MRV9BRE1JTiJdLCJleHAiOjE2Nzk4NjA3NjUsImlhdCI6MTY3OTg1NzE2NX0._Upir6Xzx877dcIMSEd75esz0IXI_pt3Ce2LDh4B45CC9YrR69yYr3CqGSGuqyZuz87Q4oRTgedtkqvGd1rHrw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://3.26.7.118:80/api/users/forget-password?email=jolyngancheaoling@gmail.com",
+							"protocol": "http",
+							"host": [
+								"3",
+								"26",
+								"7",
+								"118"
+							],
+							"port": "80",
+							"path": [
+								"api",
+								"users",
+								"forget-password"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "jolyngancheaoling@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
