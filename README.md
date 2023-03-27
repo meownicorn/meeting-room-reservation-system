@@ -16,7 +16,7 @@ Roles available: ROLE_ADMIN, ROLE_USER
 * ROLE_USER user credentials {jolyngan2@gmail.com | pwd: Jolyn3131}
 
 Postman Json Collections provided in directory
-** please take note that the system database is using UTC timemzone, the application has yet to manage the timezone.
+* please take note that the system database is using UTC timemzone, the application has yet to manage the timezone.
 
 
 ## Emails Available for AWS SES
