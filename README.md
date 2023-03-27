@@ -47,12 +47,14 @@ General Public
   - Login                  Post Request --> /api/auth/login
   - Register               Post Request --> /api/auth/register
   - Forget Password        Post Request --> /api/users/forget-password?email=
+
 User Management (ROLE_ADMIN)
   - Read All Users         Get Request --> /api/users/all
   - Read User by ID        Get Request --> /api/users/{id}
   - Create User            Post Request --> /api/users/create
   - Update User            Put Request --> /api/users/update
   - Delete User            Post Request --> 
+
 Reservation Management (ROLE_ADMIN, ROLE_USER)
   - Read All Reservation   Get Request --> /api/reservations/all
   - Find By User           Get Request --> /api/reservations/find-by-email?email=
@@ -60,6 +62,7 @@ Reservation Management (ROLE_ADMIN, ROLE_USER)
   - Create Reservation     Post Request --> /api/reservations/create
   - Update Reservation     Put Request --> /api/reservations/update
   - Delete Reservation     Post Request --> /api/reservations/delete/{id}
+
 Change Password (ROLE_ADMIN, ROLE_USER)
   - Change Password        Post Requeest --> /api/users/change-password
   
