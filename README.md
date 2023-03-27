@@ -63,7 +63,6 @@ User Management (ROLE_ADMIN)
   - Read User by ID        Get Request --> /api/users/{id}
   - Create User            Post Request --> /api/users/create
   - Update User            Put Request --> /api/users/update
-  - Delete User            Post Request --> 
 
 Reservation Management (ROLE_ADMIN, ROLE_USER)
   - Read All Reservation   Get Request --> /api/reservations/all
